@@ -8,9 +8,9 @@ class WilloughbyEngineTest(unittest.TestCase):
         self.last_service_mileage = 0
 
     def PositiveTest(self):
-        Engine = CapuletEngine(self.positive_mileage, self.last_service_mileage)
+        Engine = WilloughbyEngine(self.positive_mileage, self.last_service_mileage)
         self.assertTrue(Engine.needs_service())
 
     def test_needs_service_false(self):
-        Engine = CapuletEngine(self.negative_mileage, self.last_service_mileage)
+        Engine = WilloughbyEngine(self.negative_mileage, self.last_service_mileage)
         self.assertFalse(Engine.needs_service())
